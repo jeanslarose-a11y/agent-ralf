@@ -1,0 +1,14 @@
+{
+    "extName": {
+        "message": "Agent Ralf",
+        "description": "Nom de l'extension"
+    },
+    "extDescription": {
+        "message": "Assistant IA québécois pour automatiser le web en langage naturel - par Mak3it AI",
+        "description": "Description de l'extension"
+    },
+    "extActionTitle": {
+        "message": "Ouvrir Agent Ralf",
+        "description": "Titre de l'action"
+    }
+}

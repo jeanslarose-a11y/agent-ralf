@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Agent Ralf",
+  "description": "Assistant IA québécois pour automatiser le web en langage naturel - par Mak3it AI",
+  "version": "1.0.0",
+  "icons": {
+    "64": "assets/page-agent-64.png"
+  },
+  "default_locale": "fr",
+  "homepage_url": "https://skouik.com",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "sidePanel",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Ouvrir Agent Ralf",
+    "default_icon": {
+      "64": "assets/page-agent-64.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["main-world.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_end",
+      "js": ["content-scripts/content.js"]
+    }
+  ]
+}
